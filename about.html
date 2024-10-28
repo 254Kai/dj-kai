@@ -1,0 +1,380 @@
+<html>
+    <style>
+      * {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        }
+
+      body {
+        background-color: black;
+        background-image: url(img00.jpg);
+        color: white;
+        font-family: "IBM Plex Sans";
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 190vh;
+        margin: 0;
+        color: #d5d5d5;
+        font-size: calc(0.3 * var(--m));
+        }
+        nav {
+          max-width: 960px;
+          mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+          margin: 0 auto;
+          padding: 60px 0;
+        }
+
+        nav ul {
+          text-align: center;
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 25%, rgba(255, 255, 255, 0.4) 75%, rgba(255, 255, 255, 0) 100%);
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.938);
+        }
+
+        nav ul li {
+          display: inline-block;
+        }
+
+        nav ul li a {
+          padding: 18px;
+          font-family: "Open Sans";
+          text-transform: uppercase;
+          color: rgb(255, 255, 255);
+          font-size: 20px;
+          text-decoration: none;
+          display: block;
+        }
+
+        nav ul li a:hover {
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+          background: rgb(255, 255, 255);
+          color: rgb(0, 0, 0);
+        }
+
+        /* From Uiverse.io by kennyotsu */ 
+.card {
+  /* color used to softly clip top and bottom of the .words container */
+  --bg-color: #000000;
+  background-color: var(--bg-color);
+  padding: 2rem 3rem;
+  padding-bottom: 3rem;
+  border-radius: 1.25rem;
+}
+.loader {
+  color: rgb(124, 124, 124);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  padding: 10px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+}
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    var(--bg-color) 10%,
+    transparent 30%,
+    transparent 70%,
+    var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+  padding-left: 6px;
+  color: #6e32fc;
+  animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+  10% {
+    -webkit-transform: translateY(-102%);
+    transform: translateY(-102%);
+  }
+
+  25% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  35% {
+    -webkit-transform: translateY(-202%);
+    transform: translateY(-202%);
+  }
+
+  50% {
+    -webkit-transform: translateY(-200%);
+    transform: translateY(-200%);
+  }
+
+  60% {
+    -webkit-transform: translateY(-302%);
+    transform: translateY(-302%);
+  }
+
+  75% {
+    -webkit-transform: translateY(-300%);
+    transform: translateY(-300%);
+  }
+
+  85% {
+    -webkit-transform: translateY(-402%);
+    transform: translateY(-402%);
+  }
+
+  100% {
+    -webkit-transform: translateY(-400%);
+    transform: translateY(-400%);
+  }
+}
+
+
+        button {
+            background-color: #fff;
+            border: 1px solid #25D366;
+            padding: 5px;
+            padding-top: 1rem;
+            margin-top: 2rem;
+            position: relative;
+            width: 7.8rem;
+            height: 2.2em;
+            transition: 0.5s;
+            font-size: 17px;
+            border-radius: 0.4em;
+        }
+
+        button p {
+            position: absolute;
+            top: 0.4em;
+            left: 1.15em;
+            margin: 0;
+            padding: 0;
+            transition: .5s;
+            color: #25D366;
+        }
+
+        button svg {
+            position: absolute;
+            top: 0.45em;
+            right: 0.5em;
+            margin: 0;
+            padding: 0;
+            opacity: 0;
+            transition: 0.5s;
+            height: 1em;
+            fill: #fff;
+        }
+
+        button:hover p {
+        left: 0.5em;
+        color: #fff
+        }
+
+        button:hover svg {
+        opacity: 1;
+        }
+
+        button:hover {
+        background-color: #25D366;
+        }
+
+        @import url("https://fonts.googleapis.com/css?family=IBM%20Plex%20Sans:500|IBM%20Plex%20Sans:300");
+
+        :root {
+        --m: 4rem;
+        }
+
+       
+
+        h2 {
+        font-weight: 500;
+        text-align: center;
+        font-size: var(--m);
+        margin: 0;
+        }
+
+        h3 {
+        font-weight: 500;
+        font-size: calc(0.6 * var(--m));
+        margin: 0;
+        }
+
+
+        footer {
+        margin-top: 80vh;
+        z-index: 500;
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        padding: 5rem 2vw;
+        position: relative;
+        }
+
+        footer::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            rgba(0, 0, 0, 0) 5%,
+            rgba(0, 0, 0, 0.3) 20%,
+            rgba(0, 0, 0, 0.6) 30%,
+            rgba(0, 0, 0, 0.8) 40%,
+            rgba(0, 0, 0, 1) 50%,
+            rgb(0, 0, 0)
+        );
+        z-index: -7;
+        }
+
+        .backdrop {
+        z-index: -5;
+        position: absolute;
+        inset: 0;
+
+        backdrop-filter: blur(40px);
+        -webkit-backdrop-filter: blur(40px);
+
+        mask-image: linear-gradient(
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.5) 10%,
+            rgba(0, 0, 0, 0.8) 20%,
+            rgba(0, 0, 0, 1) 30%,
+            rgb(0, 0, 0)
+        );
+
+        -webkit-mask-image: linear-gradient(
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.5) 10%,
+            rgba(0, 0, 0, 0.8) 20%,
+            rgba(0, 0, 0, 1) 30%,
+            rgb(0, 0, 0)
+        );
+        }
+
+        .col {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: calc(0.3 * var(--m)) calc(0.8 * var(--m));
+        width: 28%;
+        }
+
+        .col2,
+        .col3 {
+        background-color: #121212;
+        border-radius: calc(0.5 * var(--m));
+        }
+
+        img {
+        height: calc(0.3 * var(--m));
+        object-fit: cover;
+        }
+
+        .social {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 1rem;
+        }
+
+        a {
+        text-decoration: none;
+        color: inherit;
+        }
+
+        .link {
+        width: calc(0.8 * var(--m));
+        height: calc(0.8 * var(--m));
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: calc(0.1 * var(--m));
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        @media screen and (max-width: 1000px) {
+        :root {
+            --m: 3rem;
+        }
+        }
+
+        @media screen and (max-width: 700px) {
+        footer {
+            flex-direction: column;
+            padding: 5rem 20vw;
+        }
+        .col {
+            width: 100%;
+        }
+        }
+
+    </style>
+    <body src="DALL·E 2024-10-13 11.10.03 - A sleek and vibrant website background for DJ Kai, focusing on flowing abstract soundwaves. Remove any flag or deck elements, emphasizing clean, dynam.webp">
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="my_collection.html">My Collection</a></li>
+        </ul>
+     </nav>
+
+     <div class="card">
+       <div class="loader">
+         <p>Listen To</p>
+         <div class="words">
+           <span class="word">Hip Hop</span>
+           <span class="word">House</span>
+           <span class="word">Afro</span>
+           <span class="word">Amapiano</span>
+           <span class="word">Kenyan Locals</span>
+         </div>
+       </div>
+     </div>
+
+    <button class="whatsapp">
+        <p>Whatsapp</p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"></path>
+        </svg>
+    </button>
+
+  <footer id="footer">
+    <div class="col col1">
+      <h3>DJ Kai</h3>
+      <div class="social">
+        <a href="https://codepen.io/Juxtopposed" target="_blank" class="link"><img src="https://assets.codepen.io/9051928/codepen_1.png" alt="" /></a>
+        <a href="https://twitter.com/juxtopposed" target="_blank" class="link"><img src="https://assets.codepen.io/9051928/x.png" alt="" /></a>
+        <a href="https://youtube.com/@juxtopposed" target="_blank" class="link"><img src="https://assets.codepen.io/9051928/youtube_1.png" alt="" /></a>
+      </div>
+      <p style="color: #818181; font-size: smaller">2024 © All Rights Reserved</p>
+    </div>
+    <div class="col col2">
+      <p>Home</p>
+      <p>About</p>
+      <p>My Collection</p>
+      <p>Terms of service</p>
+    </div>
+
+    <div class="backdrop"></div>
+  </footer>
+</body>
+</html>
